@@ -127,10 +127,43 @@ All colors MUST be HSL.
 }
 
 @layer components {
+  .professional-header {
+    @apply bg-card/80 backdrop-blur-lg border-b border-border py-4 sticky top-0 z-50;
+    box-shadow: 0 1px 3px 0 hsl(var(--card-shadow));
+  }
+  
+  .professional-footer {
+    @apply bg-card/50 backdrop-blur-sm border-t border-border py-6 mt-auto;
+  }
+  
+  .professional-button {
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300;
+    background: var(--gradient-primary);
+    color: hsl(var(--primary-foreground));
+    box-shadow: var(--shadow-card);
+  }
+  
+  .professional-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .professional-button-outline {
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300;
+    @apply border-2 border-primary/20 bg-background/80 backdrop-blur-sm;
+    @apply hover:bg-primary/10 hover:border-primary/40;
+  }
+  
   .countdown-card {
-    @apply bg-card text-card-foreground rounded-2xl p-6 shadow-lg;
+    @apply bg-card/90 text-card-foreground rounded-2xl p-6 shadow-lg transition-all duration-300;
     box-shadow: var(--shadow-card);
     backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border));
+  }
+  
+  .countdown-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
   }
   
   .countdown-number {
@@ -160,18 +193,6 @@ All colors MUST be HSL.
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: pulse-celebration 2s ease-in-out infinite;
-  }
-  
-  .share-button {
-    @apply px-8 py-4 rounded-full font-semibold transition-all duration-300;
-    background: var(--gradient-secondary);
-    color: hsl(var(--secondary-foreground));
-    box-shadow: var(--shadow-card);
-  }
-  
-  .share-button:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
   }
 }
 
