@@ -45,7 +45,7 @@ const CountdownTimer = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const shareText = "🎉 انتهت الامتحانات — يوم الإفراج! 📚✨";
+  const shareText = "🎉 انتهت الامتحانات يوم الإفراج! 📚✨";
   
   const handleShare = () => {
     if (navigator.share) {
@@ -71,7 +71,7 @@ const CountdownTimer = () => {
       <div className="min-h-screen flex flex-col items-center justify-center p-4 animate-fade-in">
         <div className="text-center max-w-4xl mx-auto">
           <div className="celebration-text mb-8">
-            🎉 انتهت الامتحانات — يوم الإفراج! 🎓
+            🎉 انتهت الامتحانات يوم الإفراج! 🎓
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
@@ -99,12 +99,12 @@ const CountdownTimer = () => {
       <div className="text-center max-w-6xl mx-auto">
         {/* Main Title */}
         <h1 className="title-gradient mb-4 animate-fade-in">
-          يوم الإفراج عن عيبد — رابعة طب بشري كفر الشيخ
+          يوم الإفراج عن عيبد رابعة طب بشري كفر الشيخ
         </h1>
         
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-muted-foreground mb-12 animate-fade-in">
-          الموعد: 14/09/2025 — 13:00 بتوقيت القاهرة
+          الموعد: 14/09/2025 13:00 بتوقيت القاهرة
         </p>
 
         {/* Countdown Grid */}
